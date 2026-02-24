@@ -55,4 +55,5 @@ Attendance acts as an associative entity between Students and Subjects.
 
 ## 👨‍💻 Author
 
-Your Name
+YUGAM|B.Tech
+
