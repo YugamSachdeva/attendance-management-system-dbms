@@ -102,14 +102,12 @@ INSERT INTO attendance (student_id, subject_id, date, status) VALUES
 (4,2,'2026-02-01','Present'),
 (5,2,'2026-02-01','Absent'),
 (6,2,'2026-02-01','Present'),
-
 (7,3,'2026-02-02','Present'),
 (8,3,'2026-02-02','Present'),
 (9,3,'2026-02-02','Absent'),
 (10,4,'2026-02-02','Present'),
 (11,4,'2026-02-02','Present'),
 (12,4,'2026-02-02','Absent'),
-
 (13,5,'2026-02-03','Present'),
 (14,5,'2026-02-03','Absent'),
 (15,5,'2026-02-03','Present');
