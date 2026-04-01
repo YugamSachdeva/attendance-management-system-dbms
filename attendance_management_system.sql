@@ -153,3 +153,41 @@ SELECT t.name AS teacher_name,
 sub.subject_name
 FROM subject sub
 JOIN teacher t ON sub.teacher_id = t.teacher_id;
+
+-- 6️⃣ Students with Class Name
+SELECT s.name AS student_name,
+       c.class_name
+FROM students s
+JOIN class c ON s.class_id = c.class_id;
+
+-- 7️⃣ Total Present and Absent Count
+SELECT status,
+COUNT(*) AS total
+FROM attendance
+GROUP BY status;
+
+-- 8️⃣ Attendance of Specific Student (Rahul Kumar)
+SELECT s.name,
+       sub.subject_name,
+       a.date,
+       a.status
+FROM attendance a
+JOIN students s ON a.student_id = s.student_id
+JOIN subject sub ON a.subject_id = sub.subject_id
+WHERE s.name = 'Rahul Kumar';
+
+-- 9️⃣ Students Who Were Absent
+SELECT s.name,
+       sub.subject_name,
+       a.date
+FROM attendance a
+JOIN students s ON a.student_id = s.student_id
+JOIN subject sub ON a.subject_id = sub.subject_id
+WHERE a.status = 'Absent';
+
+-- 🔟 Number of Subjects per Teacher
+SELECT t.name AS teacher_name,
+COUNT(sub.subject_id) AS total_subjects
+FROM teacher t
+JOIN subject sub ON t.teacher_id = sub.teacher_id
+GROUP BY t.teacher_id;
